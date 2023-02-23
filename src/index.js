@@ -23,8 +23,44 @@
 // });
 //////////////////////////////////////////////////////////////////
 
-const express = require('express')
-const app = express()
+// "dev": "nodemon src/index.js"
 
-app.listen(3000)
-console.log('Server on port', 3000)
+/////////////////////////////////////////////
+
+// const express = require('express')
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////
+
+// import express from 'express'
+// import IndexRoutes from './routes/index'
+
+// const app = express()
+
+// app.set('port', process.env.PORT || 3000);
+// app.set('json spaces', 2);
+
+// app.get('/', (req, res) => {
+    
+//     res.json({
+//         "name": "Dennis",
+//         "last_name": "Mugarte"
+//     })
+// })
+
+// app.use(IndexRoutes)
+
+// app.listen(app.get('port'))
+// console.log('Server on port', app.get('port'))
+
+///////////////////////
+
+import app from "./app"
+import './database'
+
+app.listen(app.get('port'))
+console.log('Server on port', app.get('port'))
